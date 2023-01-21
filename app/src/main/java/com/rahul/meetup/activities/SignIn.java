@@ -8,6 +8,9 @@ import android.os.Bundle;
 
 import com.example.meetup.R;
 import com.example.meetup.databinding.ActivitySignInBinding;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
 
 public class SignIn extends AppCompatActivity {
 
@@ -24,5 +27,10 @@ public class SignIn extends AppCompatActivity {
     private void setListeners(){
         binding.registerText.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), Register.class)));
+    }
+
+    private void addDataToFirestore(){
+        FirebaseFirestore databse = FirebaseFirestore.getInstance();
+        HashMap<String, Object> data = new HashMap<>();
     }
 }

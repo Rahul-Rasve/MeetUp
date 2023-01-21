@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "403986071786",
+    "project_id": "meet-up-6c6fd",
+    "storage_bucket": "meet-up-6c6fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403986071786:android:29ce34122c3c4dd420d793",
+        "android_client_info": {
+          "package_name": "com.rahul.meetup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403986071786-jc2imn7e87dtmpgbl6ch7471sas6l0b3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhk7keWs-SlbEUH2JCDwAHoVvjMHpinCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403986071786-jc2imn7e87dtmpgbl6ch7471sas6l0b3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
