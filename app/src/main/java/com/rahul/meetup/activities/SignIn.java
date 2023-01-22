@@ -31,6 +31,12 @@ public class SignIn extends AppCompatActivity {
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
+        if(preferenceManager.getBoolean(Constants.KEY_IS_SIGNED_IN)){
+            //save login details and keep user logged in
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
         setListeners();
     }
 
