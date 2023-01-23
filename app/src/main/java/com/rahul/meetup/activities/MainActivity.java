@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setListeners(){
         binding.logoutImage.setOnClickListener(v -> signOut());
+        binding.fabNewChat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), UsersActivity.class)));
     }
 
 /*
@@ -81,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
                 .document(preferenceManager.getString(Constants.KEY_USER_ID)
                 );
         documentReference.update(Constants.KEY_FCM_TOKEN, token)
-                .addOnSuccessListener(unused -> createToast("Token Updated Successfully"))
                 .addOnFailureListener(exception -> createToast("Unable to Update Token"));
     }
 
