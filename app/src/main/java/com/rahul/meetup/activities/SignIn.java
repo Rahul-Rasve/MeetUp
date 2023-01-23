@@ -1,24 +1,18 @@
 package com.rahul.meetup.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.meetup.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.meetup.databinding.ActivitySignInBinding;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.rahul.meetup.utilities.Constants;
 import com.rahul.meetup.utilities.PreferenceManager;
-
-import java.lang.ref.PhantomReference;
-import java.util.HashMap;
-import java.util.regex.Pattern;
 
 public class SignIn extends AppCompatActivity {
 
@@ -85,11 +79,6 @@ public class SignIn extends AppCompatActivity {
             binding.loginButton.setVisibility(View.VISIBLE);
             binding.progressBar.setVisibility(View.INVISIBLE);
         }
-    }
-
-    private void addDataToFireStore(){
-        FirebaseFirestore database = FirebaseFirestore.getInstance();
-        HashMap<String, Object> data = new HashMap<>();
     }
 
     private void createToast(String message){

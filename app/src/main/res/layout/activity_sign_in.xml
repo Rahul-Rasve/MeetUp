@@ -37,7 +37,7 @@
         <EditText
             android:id="@+id/inputEmail"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_40sdp"
             android:background="@drawable/background_input"
             android:hint="@string/email"
@@ -52,7 +52,7 @@
         <EditText
             android:id="@+id/inputPassword"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_16sdp"
             android:background="@drawable/background_input"
             android:hint="@string/password"
@@ -67,7 +67,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
             android:animateLayoutChanges="true">
 
             <com.google.android.material.button.MaterialButton
