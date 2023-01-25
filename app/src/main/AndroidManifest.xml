@@ -14,6 +14,9 @@
         android:theme="@style/Theme.MeetUp"
         tools:targetApi="33">
         <activity
+            android:name="com.rahul.meetup.activities.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name="com.rahul.meetup.activities.UsersActivity"
             android:exported="false" />
         <activity
