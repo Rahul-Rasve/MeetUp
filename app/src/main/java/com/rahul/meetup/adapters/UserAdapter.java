@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.meetup.databinding.ItemContainerUserBinding;
+import com.rahul.meetup.listeners.UserListeners;
 import com.rahul.meetup.models.User;
 
 import java.util.List;
@@ -17,9 +18,11 @@ import java.util.List;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder>{
 
     private final List<User> users;
+    private final UserListeners userListeners;
 
-    public UserAdapter(List<User> users) {
+    public UserAdapter(List<User> users, UserListeners userListeners) {
         this.users = users;
+        this.userListeners = userListeners;
     }
 
     @NonNull
@@ -55,6 +58,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             binding.nameText.setText(user.name);
             binding.emailText.setText(user.email);
             binding.profileImage.setImageBitmap(getUSerImage(user.image));
+            binding.getRoot().setOnClickListener(v -> userListeners.onUserClicked(user)); //take to the user chat page
         }
     }
 

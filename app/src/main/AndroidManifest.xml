@@ -15,7 +15,8 @@
         tools:targetApi="33">
         <activity
             android:name="com.rahul.meetup.activities.ChatActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.rahul.meetup.activities.UsersActivity"
             android:exported="false" />
