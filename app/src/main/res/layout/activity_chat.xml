@@ -74,6 +74,7 @@ It(headerBackground) should be here so that it moves behind the back, name and i
         android:id="@+id/viewSupporter"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:background="@color/primary"
         android:layout_marginTop="@dimen/_12sdp"
         app:layout_constraintTop_toBottomOf="@id/backImage"/>
 
@@ -84,7 +85,8 @@ It(headerBackground) should be here so that it moves behind the back, name and i
         android:clipToPadding="false"
         android:orientation="vertical"
         android:overScrollMode="never"
-        android:padding="20sp"
+        android:padding="@dimen/_20sdp"
+        app:stackFromEnd="true"
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/backgroundView"
