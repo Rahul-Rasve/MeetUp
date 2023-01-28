@@ -78,19 +78,6 @@ It(headerBackground) should be here so that it moves behind the back, name and i
         android:layout_marginTop="@dimen/_12sdp"
         app:layout_constraintTop_toBottomOf="@id/backImage"/>
 
-    <TextView
-        android:id="@+id/availabilityText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/green"
-        android:textSize="@dimen/_10ssp"
-        android:textColor="@color/white"
-        android:text="@string/online"
-        android:gravity="center"
-        android:padding="@dimen/_2sdp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/viewSupporter"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
@@ -103,7 +90,7 @@ It(headerBackground) should be here so that it moves behind the back, name and i
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/backgroundView"
-        app:layout_constraintTop_toBottomOf="@id/availabilityText"/>
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -154,5 +141,18 @@ It(headerBackground) should be here so that it moves behind the back, name and i
         app:layout_constraintEnd_toStartOf="@id/sendLayout"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/availabilityText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:text="@string/online"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

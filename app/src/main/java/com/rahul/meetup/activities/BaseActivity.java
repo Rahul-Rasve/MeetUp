@@ -1,7 +1,6 @@
 package com.rahul.meetup.activities;
 
 import android.os.Bundle;
-import android.view.contentcapture.DataRemovalRequest;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
