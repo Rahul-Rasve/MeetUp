@@ -69,8 +69,6 @@
             android:textSize="@dimen/_12ssp"
             android:visibility="gone"/>
 
-
     </FrameLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
