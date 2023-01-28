@@ -19,7 +19,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.rahul.meetup.adapters.RecentConversationsAdapter;
+import com.rahul.meetup.listeners.ConversationListener;
 import com.rahul.meetup.models.ChatMessage;
+import com.rahul.meetup.models.User;
 import com.rahul.meetup.utilities.Constants;
 import com.rahul.meetup.utilities.PreferenceManager;
 
@@ -28,7 +30,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ConversationListener {
 
     private PreferenceManager preferenceManager;
     private ActivityMainBinding binding;
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void init(){
         conversations = new ArrayList<>();
-        recentConversationsAdapter = new RecentConversationsAdapter(conversations);
+        recentConversationsAdapter = new RecentConversationsAdapter(conversations, this);
         binding.convoRecyclerView.setAdapter(recentConversationsAdapter);
         database = FirebaseFirestore.getInstance();
     }
@@ -179,5 +181,12 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 })
                 .addOnFailureListener(exception -> createToast("Logout Failed"));
+    }
+
+    @Override
+    public void onConversationClicked(User user) {
+        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+        intent.putExtra(Constants.KEY_USER, user);
+        startActivity(intent);
     }
 }
